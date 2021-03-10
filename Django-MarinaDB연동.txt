@@ -1,0 +1,39 @@
+
+---------------------------------------------
+Django - Marina DB  연동 ( My sql ) 
+---------------------------------------------
+0. Marina DB 설치  
+Service Name: MySQL 
+Port : 3306
+
+
+1. 연동 드라이버 설치 
+> pip install  mysqlclient  
+
+
+2.settings.py  수정 
+    #----------------------------
+    #  MarinaDB
+    # ----------------------------
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'teamplace' ,
+        'USER' : 'teamplace',
+        'PASSWORD' : '1234' ,
+        'HOST' :'127.0.0.1',
+        'PORT' : '3306' ,
+    },
+
+3.변경사항  DB 반영 
+>python manage.py makemigrations
+> python manage.py migrate
+
+
+
+
+
+4. DB 확인  
+>  python manage.py dbshell 
+ ---> marina DB실행 
+
+admin  실행 
